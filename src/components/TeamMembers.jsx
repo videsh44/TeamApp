@@ -51,16 +51,19 @@ const TeamMembers = props => {
     {
       title: "Name",
       dataIndex: "name",
-      key: "name"
+      key: "name",
+      width: 120
     },
     {
       title: "Discription",
       dataIndex: "discription",
-      key: "discription"
+      key: "discription",
+      width: 200
     },
     {
       title: "Action",
       key: "action",
+      width: 100,
       render: record => (
         <span
           onClick={() => onDeleteMember(record)}

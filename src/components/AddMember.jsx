@@ -3,6 +3,8 @@ import { Input, Button, message } from "antd";
 import { connect } from "react-redux";
 import { addTeamMembers } from "../actions";
 
+const { TextArea } = Input;
+
 const AddMember = ({
   dispatch,
   selectedData,
@@ -77,7 +79,7 @@ const AddMember = ({
           <div>
             <Input
               type="text"
-              placeholder="Serise Name"
+              placeholder="Member Name"
               style={
                 name === null
                   ? {
@@ -109,9 +111,8 @@ const AddMember = ({
         </div>
         <div style={{ width: "calc(100% - 160px)", marginLeft: "20px" }}>
           <div>
-            <Input
-              type="text"
-              placeholder="Serise Name"
+            <TextArea
+              placeholder="Member Description"
               style={
                 description === null
                   ? {
@@ -123,6 +124,7 @@ const AddMember = ({
                     }
               }
               onChange={onDescriptionChange}
+              rows={4}
             />
           </div>
           {description === null ? (
