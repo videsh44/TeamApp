@@ -39,7 +39,7 @@ const TeamMembers = props => {
     setSearchfilterString(filterString);
     if (filterString) {
       const list = globalData.filter(item =>
-        item.name.toLowerCase().includes(filterString)
+        item.name.toLowerCase().includes(filterString.toLowerCase())
       );
       setData(list);
     } else {
