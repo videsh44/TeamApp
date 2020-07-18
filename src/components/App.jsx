@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import AddTeam from "./AddTeam";
 import "antd/dist/antd.css";
 
-const App = props => {
+const App = (props) => {
   return (
     <Router history={history}>
       <Switch>
@@ -20,7 +20,7 @@ const App = props => {
         />
         */}
 
-        <Route path="/team" component={AddTeam} />
+        <Route path="/TeamApp" component={AddTeam} />
         <Route path="/" exact component={AddTeam} />
       </Switch>
     </Router>
